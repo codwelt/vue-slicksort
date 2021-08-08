@@ -1,4 +1,6 @@
 export function arrayMove(arr, previousIndex, newIndex) {
+
+/*
   const array = arr.slice(0);
   if (newIndex >= array.length) {
     let k = newIndex - array.length;
@@ -7,6 +9,15 @@ export function arrayMove(arr, previousIndex, newIndex) {
     }
   }
   array.splice(newIndex, 0, array.splice(previousIndex, 1)[0]);
+  return array;
+
+*/
+ const itemOld = arr[previousIndex];
+  const newItem = arr[newIndex];
+  let  array = arr.slice(0);
+  array[previousIndex] = newItem;
+  array[newIndex] = itemOld;
+
   return array;
 }
 
